@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/quiz.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quiz Proyect</title>
+  </head>
+  <body>
+
+    <header >
+      <a href="../index.html" class="duck">
+          <img src="../img/duck.svg" alt="">
+      </a>
+      <span class="burg">
+          
+      </span>            
+    </header>
+
+
+    <div class="burgMenu ">
+      <div class="menuBtns ">
+          <a href="../index.html">Inicio</a>
+          <a href="../Slider(complete)/slider.html">Slider</a>
+          <a href="../Quiz(complete)/quiz.html">Quiz</a>
+          <a href="../Filter(complete)/filter.html">Side Menu</a>
+      </div>
+    </div>
+
+    <div class="mainWrapper">
+      <div class="container">
+        <div class="game">
+          <div class="content">
+            <div class="question-containe">
+              <h1 class="question"></h1>
+            </div>
+            <div class="answers">
+            </div>
+          </div>
+          <button class="submit"> Submit</button>
+        </div>
+        <div class="result">
+          <div class="title">
+            <h1>Congratulations</h1>
+          </div>
+            <div class="count">
+              <span class="correct">Correct Answers: 0</span>
+              <span class="wrong">Wrong Answers: 0</span>
+            </div>
+            <span class="score">Score: 0</span>
+            <button class="play">Play again</button>
+        </div>
+    </div>
+    <div class="bg">
+      <img src="../img/fondito quiz.jpg" alt="" class="bg-img" />
+    </div>
+    </div>
+    
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="quiz.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBs4cFw2-U8-JMy57BVaM2XmHSOVcRSh9Y",
+      authDomain: "paginademuestra-ea4f6.firebaseapp.com",
+      projectId: "paginademuestra-ea4f6",
+      storageBucket: "paginademuestra-ea4f6.appspot.com",
+      messagingSenderId: "89188261232",
+      appId: "1:89188261232:web:37d19694948a801046c3b5",
+      measurementId: "G-V6NEYC2PRY"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</html>
